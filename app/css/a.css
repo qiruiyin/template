@@ -1,0 +1,17 @@
+.a {
+  height: 100px;
+  opacity: .1;
+  width: 100px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  background: transparent url("image.png") left top no-repeat;
+  -webkit-animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+body {
+  color: red;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=a.css.map */
