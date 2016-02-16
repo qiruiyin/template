@@ -27,21 +27,21 @@
 
   // gulp-jshint
   // js代码校验
-  // gulp.task('jshint', function() {
-  //   return gulp.src([ 'gulpfile.js' , _.js + '/**/*.js'])
-  //     .pipe($.jshint('.jshintrc'))
-  //     .pipe($.jshint.reporter('default'));
-  // });
+  gulp.task('jshint', function() {
+    return gulp.src([ 'gulpfile.js' , _.js + '/**/*.js'])
+      .pipe($.jshint())
+      .pipe($.jshint.reporter('jshint-stylish'));
+  });
 
-  // gulp-scsslint
+  // gulp-scss-lint
   // scss校验
-  // gulp.task('scsslint', function() {
-  //   return gulp.src([_.sass + '/**/*.{scss, sass}'])
-  //     .pipe($.scssLint({
-  //       'config': '.scsslintrc',
-  //       'customReport': $.scssLintStylish
-  //     }));
-  // });
+  gulp.task('scss-lint', function() {
+    return gulp.src([_.sass + '/**/*.{scss, sass}'])
+      .pipe($.scssLint({
+        'config': '.scsslintrc',
+        'customReport': $.scssLintStylish
+      }));
+  });
 
 	// gulp-sass, gulp-autoprefixer, gulp-sourcemaps
 	// 将sass预处理为css，
@@ -142,7 +142,7 @@
 	// 启动项目
 	gulp.task('start', ['watch']);
 	// 检查css和js
-  // gulp.task('test',  ['jshint', 'scsslint']);
+  gulp.task('test',  ['jshint', 'scss-lint']);
 	// 默认
 	gulp.task('default', ['html', 'sass', 'rimraf'], function(){
 		gulp.start(['image', 'dist']);
