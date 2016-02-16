@@ -24,3 +24,7 @@
 
 * 'npm install'
 * 'gulp start'
+
+## SCSS 文件说明
+
+* 参考https://github.com/marvin1023/sandal.git 和 https://github.com/jimyuan/tmpl.git

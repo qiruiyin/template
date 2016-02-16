@@ -1,14 +1,13 @@
-.a {
-	height: 100px;
-	opacity: .1;
-	width: 100px;
-	transform: rotate(180deg);
-	background:transparent url('image.png') left top no-repeat;
-	animation: name duration timing-function delay iteration-count direction fill-mode;
-}
+@charset 'utf-8';
+@import  'core/mixins';
 
 body {
 	color: red;
 	font-size: 20px;
 	box-sizing: border-box;
+}
+
+h1 {
+	@include size(100px);
+	background-color: green
 }
