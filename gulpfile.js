@@ -140,7 +140,7 @@
 
 	// gulp-start
 	// 启动项目
-	gulp.task('start', ['watch']);
+	gulp.task('start', ['watch', 'html', 'sass']);
 	// 检查css和js
   gulp.task('test',  ['jshint', 'scss-lint']);
 	// 默认
