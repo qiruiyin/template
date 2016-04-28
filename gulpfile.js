@@ -10,12 +10,12 @@
         tmpl: 'app/src',        
         js:   'app/js',
         css:  'app/css',
-        img:  'app/img'
+        img:  'app/images'
 			},
 			files = [
 		    'app/*.html',
 		    'app/css/**/*.css',
-		    'app/img/**/*',
+		    'app/images/**/*',
 		    'app/js/**/*.js'
 		  ];
 
@@ -43,6 +43,18 @@
       }));
   });
 
+  // gulp-css-spriter
+	// 制作雪碧图
+	gulp.task('sprite', function(){
+		return gulp.src(_.css + '/*.css')
+      .pipe($.cssSpriter({
+				// 生成的spriter的位置
+        'spriteSheet': _.img + '/btn.png',
+        // 生成样式文件图片引用地址的路径
+        'pathToSpriteSheetFromCSS': '../images/btn.png'
+			}))
+	});
+
 	// gulp-sass, gulp-autoprefixer, gulp-sourcemaps
 	// 将sass预处理为css，
 	// 使用autoprefixer来补全浏览器兼容的css
@@ -51,12 +63,17 @@
 		return gulp.src(_.sass + '/*.scss')
 			.pipe($.plumber({ errorHandler: handleError}))
 			.pipe($.sourcemaps.init())
-			
 			.pipe($.sass({
         outputStyle: 'expanded',
         includePaths: [ './bower_components/' ]
       }))
-      			.pipe($.autoprefixer({
+      .pipe($.cssSpriter({
+				// 生成的spriter的位置
+        'spriteSheet': _.img + '/sprite1.png',
+        // 生成样式文件图片引用地址的路径
+        'pathToSpriteSheetFromCSS': '../img/sprite1.png'
+			}))
+			.pipe($.autoprefixer({
 				browers: ['last 2 versions','safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']
 			}))
 			.pipe($.sourcemaps.write('./'))
