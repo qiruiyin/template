@@ -35,24 +35,14 @@
   
 	// background-image always has a url 且判断url是否有?__spriter后缀
 	if(transformedDeclaration.property === 'background-image' && /\?__spriter/i.test(transformedDeclaration.value)) {
-	
 	    transformedDeclaration.value = transformedDeclaration.value.replace('?__spriter','');
-	
 	    return cb(transformedDeclaration, declarationIndex, declarations);
-	
 	  }
-	
 	  // Background is a shorthand property so make sure `url()` is in there 且判断url是否有?__spriter后缀
-	
 	  else if(transformedDeclaration.property === 'background' && /\?__spriter/i.test(transformedDeclaration.value)) {
-	
 	    transformedDeclaration.value = transformedDeclaration.value.replace('?__spriter','');
-	
 	    var hasImageValue = spriterUtil.backgroundURLRegex.test(transformedDeclaration.value);
-	
 	    if(hasImageValue) {
-	
 	        return cb(transformedDeclaration, declarationIndex, declarations);
-	
 	    }
 	  }
