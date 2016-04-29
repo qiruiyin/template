@@ -11,3 +11,69 @@ h1 {
 	@include size(100px);
 	background-color: green
 }
+
+
+// 默认颜色
+.yg-btn {
+  &.yg-btn-eye {
+    background-image: url('../images/icon/btn/eye.png?__spriter');
+  }
+
+  &.yg-btn-edit {
+    background-image: url('../images/icon/btn/edit.png?__spriter');
+  }
+
+  &.yg-btn-delete {
+    background-image: url('../images/icon/btn/delete.png?__spriter');
+  }
+
+  &.yg-btn-plus {
+    background-image: url('../images/icon/btn/plus.png?__spriter');
+  }
+
+  &.yg-btn-audit {
+    background-image: url('../images/icon/btn/audit.png?__spriter');
+  }
+
+  &.yg-btn-submit {
+    background-image: url('../images/icon/btn/submit.png?__spriter');
+  }
+
+  &.yg-btn-refresh {
+    background-image: url('../images/icon/btn/refresh.png?__spriter');
+  }
+
+  &.yg-btn-hander {
+    background-image: url('../images/icon/btn/hander.png?__spriter');
+  }
+
+  &.yg-btn-upload {
+    float: right;
+    background-image: url('../images/icon/btn/upload.png?__spriter');
+  }
+
+  &.yg-btn-reset {
+    background-image: url('../images/icon/btn/reset.png?__spriter');
+  }
+
+  &.yg-btn-download {
+    float: right;
+    background-image: url('../images/icon/btn/download.png?__spriter');
+  }
+
+  &.yg-btn-ban {
+    background-image: url('../images/icon/btn/ban.png?__spriter');
+  }
+
+  &.yg-btn-search {
+    background-image: url('../images/icon/btn/search.png?__spriter');
+  }
+
+  &.yg-btn-check {
+    background-image: url('../images/icon/btn/check.png?__spriter');
+  }
+
+  &.yg-btn-batch {
+    background-image: url('../images/icon/btn/batch.png?__spriter');
+  }
+}

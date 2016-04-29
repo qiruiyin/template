@@ -30,8 +30,9 @@
 * 参考https://github.com/marvin1023/sandal.git 和 https://github.com/jimyuan/tmpl.git
 
 ## 雪碧图生成说明
-1、请修改gulp-css-spriter/lib/map-over......文件的第48行开始
-替换为
+
+  1、请修改gulp-css-spriter/lib/map-over......文件的第48行开始替换为
+
 	// background-image always has a url 且判断url是否有?__spriter后缀
 
   if(transformedDeclaration.property === 'background-image' && /\?__spriter/i.test(transformedDeclaration.value)) {
