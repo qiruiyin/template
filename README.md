@@ -32,8 +32,8 @@
 ## 雪碧图生成说明
 
   1、请修改gulp-css-spriter/lib/map-over......文件的第48行开始替换为
+  
 	// background-image always has a url 且判断url是否有?__spriter后缀
-	
 	if(transformedDeclaration.property === 'background-image' && /\?__spriter/i.test(transformedDeclaration.value)) {
 	
 	    transformedDeclaration.value = transformedDeclaration.value.replace('?__spriter','');
