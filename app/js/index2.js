@@ -1,6 +1,6 @@
 (function(){
 	document.getElementById("demo").onclick = function() {
 		this.style.color = "blue";
-		console.log(1);
+		console.log(2);
 	};
 })();
